@@ -1,2 +1,2 @@
 # sga
-Novo SGA - Sistema de Gerenciamento de Atendimento
+Novo SGA em Docker - Sistema de Gerenciamento de Atendimento 

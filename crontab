@@ -1,0 +1,9 @@
+# Reset de senhas 
+0 0 * * * root cd /var/www/html/novosga/bin && sh novosga reset
+# Apaga o cache
+30 0 * * * root rm -r /var/www/html/novosga/var/cache/*
+# Faz Backup de 10 em 10 dias.
+45 0 */10 * * root cd /var/www/html/novosga/config && mkdir BKP-$(date +%d-%m-%Y) && cd BKP-$(date +%d-%m-%Y) && mysqldump -u novosga -psga123 novosga > backup.sql
+
+# Don't remove the empty line at the end of this file. It is required to run the cron job
+
